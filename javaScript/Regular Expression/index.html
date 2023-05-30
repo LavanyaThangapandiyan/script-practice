@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+</head>
+<body>
+    <script>
+        function validate()
+        {
+            var name=document.getElementById("name").value;
+            var regexName=/^[a-zA-Z ]+$/;
+            var phone=document.getElementById("phone").value;
+            var regexPhone=/^([0|\+[0-9]{1,5})?([7-9][0-9]{9})$/;
+            var email=document.getElementById("email").value;
+            var regexEmail=/^\S+@\S+\.\S+$/;
+
+            if(regexName.test(name)&&regexPhone.test(phone)&&regexEmail.test(email))
+            alert("Valid User Details");
+            else
+            {
+            alert("Invalid User Details");
+            document.getElementById("user").style.visibility="visible";
+            }
+        }
+    </script>
+    <div align="center">
+    <h3>Login User Details</h3>
+   </div>
+   <br><br><br>
+    <div align="center">
+    <form align="center">
+        <input id="name" placeholder="Enter User Name" type="text"/><br>
+        <br>
+        <input id="phone" placeholder="Enter Mobile Number" type="text"/><br>
+        <br>
+        <input id="email" placeholder="Enter Email " type="text"/><br>
+        <br>
+        <label id="user" style="color:red;visibility:hidden">
+        Invalid
+        </label>
+<button onclick="validate()" type="button">Submit</button>
+    </form>
+</div>
+</body>
+</html>
