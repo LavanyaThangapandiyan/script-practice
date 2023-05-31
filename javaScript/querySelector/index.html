@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ <div>
+    <ul>
+        <li>name</li>
+        <li>Age</li>
+        <li>Gender</li>
+        <li>email</li>
+    </ul>
+ </div>
+ <div>
+    <h2>HI</h2>
+ </div>
+<div>
+    <input type="text" value="name">
+    <h3>Hello</h3>
+</div>
+    <script>
+     //use query selector
+     //this takes only div part of this page
+     //-->it occur only First Value 
+     
+    
+     let get=document.querySelector("input");
+     //-->here get the input value 
+     console.log(get.value);
+ 
+    //use query selector All
+    // It returns in Nodelist of values
+     
+    let getAll=document.querySelectorAll("li");
+    //-->Here get the inner value of list use list Number
+     console.log(getAll[3].innerText);
+    </script>
+</body>
+</html>
