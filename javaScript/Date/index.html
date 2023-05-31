@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+<h3 align="center">Age Calculator</h3>
+<div align="center">
+    <br><br><br>
+    <div >
+    <label>Date OF Birth</label>
+    <input type="date" id="dob" placeholder="Enter Your Date Of Birth" >
+    </div><br><br><br>
+    <div align="center">
+    <button id="Calculate" onclick="findAge();">Calculate Age</button>
+</div>
+</form>
+</div>
+  <script >
+     function findAge()
+     {
+         var input=document.getElementById("dob").value;
+         console.log(input);
+          // convert user input value into date object
+          var birthDate=new Date(input);
+          console.log("BirthDate" +birthDate);
+          // get difference from current date;
+          var difference=Date.now()-birthDate.getTime();
+          var ageDate=new Date(difference);
+          var CalculateAge=Math.abs(ageDate.getUTCFullYear()-1970);  //years passed till 1970
+          alert("Your Age Is : "+CalculateAge);
+
+     }
+  </script>  
+
+</body>
+</html>
